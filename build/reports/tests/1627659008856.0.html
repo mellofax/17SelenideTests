@@ -1,0 +1,684 @@
+<html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="1140"><meta name="viewport" content="initial-scale=1.0,user-scalable=no"><meta name="description" content="With Mood Panda you can track your mood and be part of a lovely community; Also available on iOS and Android App Store. Create an interactive Mood Diary/Mood Journal, Create graphs of your 
+        mood over the day, month, year; Post your happiness to Facebook/Twitter;  "><meta name="keywords" content="Allow you to track your mood, Keep a historical record of your ups and downs, Mood Graphs over the day, month, year,
+     Compare your mood to the rest of the world,Reveal fascinating facts about people's mood,Share your mood with friends"> <meta property="og:image" content="http://moodpanda.com/images/v4/Icon512.png"><meta property="og:title" content="MoodPanda.com - Your Interactive Mood Diary"><meta property="og:site_name" content="MoodPanda.com"><link rel="apple-touch-icon" href="/images/v4/Icon120.png"><link rel="icon" type="image/png" href="/images/v4/Icon120.png"><link rel="SHORTCUT ICON" href="/images/v4/Icon120.png"><meta property="fb:app_id" content="104485459589872"><title>
+	
+        MoodPanda - Your Mood Diary - Rate and Track your mood over time
+</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/BootStrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/styles/MoodPandaResponsive.css?r=34" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <!--script src="/scripts/jquery-ui-1.10.4.custom.min.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.ui.touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="/scripts/jquery.charcounter.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="/BootStrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .badge-0, .badge-1, .badge-2, .badge-3, .badge-4
+        {
+            background: none !important;
+            background-color: #f97a7a !important;
+        }
+        
+        .badge-5
+        {
+            background: none !important;
+            background-color: #F39C12 !important;
+        }
+        
+        .badge-6, .badge-7, .badge-8, .badge-9, .badge-10
+        {
+            background: none !important;
+            background-color: #AFD246 !important;
+        }
+        
+        .border-0, .border-1, .border-2, .border-3, .border-4
+        {
+            border: solid 2px #f97a7a !important;
+            background-color: #fff;
+        }
+        
+        .border-5
+        {
+            border: solid 2px #F39C12 !important;
+            background-color: #fff;
+        }
+        
+        .border-6, .border-7, .border-8, .border-9, .border-10
+        {
+            border: solid 2px #AFD246 !important;
+            background-color: #fff;
+        }
+        
+        .loading
+        {
+            display: block !important;
+        }
+        
+        #LoadDiv
+        {
+            display: block;
+            position: fixed;
+            top: 46px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="modal-open" style="">
+    <form method="post" action="" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDA0OTUwNjkPZBYCZg9kFgICAw9kFgoCAQ8WAh4HVmlzaWJsZWdkAgIPFgIfAGgWAgIBDxYCHwBoZAIDDxYCHwBoZAIEDxYCHwBoZAIQD2QWAgIFDxYCHwBnZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUWY3RsMDAkQ2hlY2tCb3hGYWNlYm9vawUVY3RsMDAkQ2hlY2tCb3hUd2l0dGVy74qD6mwA48VDSlPRbZ/iIRwdeDUGOAoUul+wp+SH2fQ=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="25748CED">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACMLZVqPO8h1r1suDplX2jYR6wHH3V1W6wbgcvkpQk2CvPpFf1AB6BtcknQjrcg8kjlMI3CIqVgRbr5BJ+82ZLwCOh8QOxdFD8GXNZmls3Nc03onnJ7hgNrYNQ35LW07Jl9wuvflIDAYktBFly4topaO8oZgQRfWG+OcaPaoJ3EyQ0vZEUrerrrv6pyJJRuj0M4NNve1zP3riwbIRwtsDgnr26b5O4u0MLHmSEs31HV47uBpQhqEGGZjtiVk+vLrGSWbOCAHuOoDDfTTv8fqwCT+qETuemTK39SsAzF26tXtsbC51J0eqUVnY/0NmpeeRCYomvw+iSEqy/Cw4ZZn24FqMGxN+gMkXIQ9yQXk+OyIO5hDyglCfjCq/PgNyW/44EKGsiwar0vurKq1ymbymWdNGjkXufYeL7UHmrNI0aGkMxtDQMsecl9ZQo6UKcF9WOt3nPoT5G9JGt8peMMLwdUZUXOxyYjMIj9Y6/V3es1kIC1+S6bv43+QHMsQU/p7oqpkUi4sUbp0e2hbd/uVFksfoidAXrr27HaFKlmX9wk/WnhpBcg+PmqVb+6nc0/pdo72Pn3b+L/Z+H0LfwtdPqKpuuojDHzSfAZazJKXRYEk87E1cF8++3K8giXaP4z5tY+sY+Y9mEwR9i+vXlaOLlwFkwrOTnvUQTxbxPKHN73qjQQez6IaUdz0a+7uljswPvhu6uwIZDNecl43S1v8PdfFgG1N1gk8ZFyPNdOwqxI6J+0wqdtRgFcwZ/fpiUnUkjr2woXVxEv9UIRrpho6NPMs">
+</div>
+    <div class="container">
+        
+        <div id="LoadDiv" style="display: none;">
+            <div class="well well-sm">
+                <img src="/homepage/img/mp-trans-eyes.svg" width="20@">&nbsp;Loading
+            </div>
+        </div>
+        <div class="navbar navbar-default navbar-fixed-top navbar-opaque">
+        </div>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    
+                    <ul class="nav nav-tabs">
+                        <li id="NotLoggedIn"><span><a href="/Login" class="btn btn-sm btn-primary" style="margin-top: 6px; margin-left: 6px;">Join MoodPanda</a>
+                        </span></li>
+                        
+                        
+                        
+                        <li id="LiJoin"><a href="/?Login=t" class="list-group-item">
+                            <img src="/homepage/img/mp-trans-eyes.svg" width="20"></a></li>
+                        <li>
+                            
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </div>
+    <div class="container edgetoedge">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-12 ">
+                
+                <div id="UpdateMood" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content border-wide-5">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    ×</button>
+                                <h4 class="modal-title">
+                                    Rate Your Happiness</h4>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <div class="row">
+                                    <div class="col-xs-1" style="text-align: left;">
+                                        <img style="position: relative; top: -6px; opacity: 0.4;" src="/images/v4/sad.png">
+                                    </div>
+                                    <div class="col-xs-10" style="text-align: center;">
+                                    </div>
+                                    <div class="col-xs-1" style="text-align: right;">
+                                        <img style="position: relative; top: -6px; opacity: 0.4;" src="/images/v4/smile.png">
+                                    </div>
+                                </div>
+                                <div id="slider-range-min" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all ui-draggable" aria-disabled="false">
+                                <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min badge-5" style="width: 50%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 50%;"></a></div>
+                                <br>
+                                  
+                                <div class="alert alert-danger alert-sm" id="Crisis" style="display: none;">
+                                   If you feel at risk, please contact someone:
+                                    <br><a href="/urgent" class="btn btn-danger btn-xs pull-right" target="_blank">Find urgent help</a>
+                                    <div class="clearfix"></div>
+                                </div>
+
+
+                                <div>
+                                    
+                                   
+                                </div>
+                                
+                                <textarea name="ctl00$TextBoxUpdateMoodTag" rows="6" cols="20" id="TextBoxUpdateMoodTag" class="form-control UpdateMoodText" placeholder="What's happening? Include #hashtags" style="border-width:1px;border-style:solid;width:100%;"></textarea>
+                                     
+                                    <div id="CharacterCounter" class="pull-right text-muted" style="">400 chars remaining</div>
+                                    <div class="clearfix"></div>
+                                <div class="well well-sm" style="margin-top: 5px">
+                                    <div id="Advanced">
+                                        <label style="margin-right: 5px;">
+                                            Date
+                                        </label>
+                                        <input type="text" id="DatePicker" value="NOW" readonly="" style="margin-left: 20px;
+                                            width: 100px; background: transparent !IMPORTANT; border: 0 !IMPORTANT;" class="hasDatepicker"><img class="ui-datepicker-trigger" src="/images/v4/calendar.png" alt="..." title="..." style="left: -122px; top: -3px; position: relative;">
+                                        <div>
+                                            <div class="ResetOlder btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                               Older
+                                            </div>
+                                            <div class="Reset3day btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                                3 days ago
+                                            </div>
+                                            <div class="Reset2day btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                                2 days ago
+                                            </div>
+                                            <div class="ResetYesterday btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                                Yesterday
+                                            </div>
+                                            <div class="ResetNow btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                                Now
+                                            </div>
+                                            <div>
+                                                <div style="margin-top: 5px;">
+                                                    <select name="ctl00$ddlHistoricHour" id="ddlHistoricHour" class="form-contarol input-sm DateHour" style="width: 120px; display: none;">
+	<option selected="selected" value="00">Midnight</option>
+	<option value="01">1 am</option>
+	<option value="02">2 am</option>
+	<option value="03">3 am</option>
+	<option value="04">4 am</option>
+	<option value="05">5 am</option>
+	<option value="06">6 am</option>
+	<option value="07">7 am</option>
+	<option value="08">8 am</option>
+	<option value="09">9 am</option>
+	<option value="10">10 am</option>
+	<option value="11">11 am</option>
+	<option value="12">Midday</option>
+	<option value="13">1 pm</option>
+	<option value="14">2 pm</option>
+	<option value="15">3 pm</option>
+	<option value="16">4 pm</option>
+	<option value="17">5 pm</option>
+	<option value="18">6 pm</option>
+	<option value="19">7 pm</option>
+	<option value="20">8 pm</option>
+	<option value="21">9 pm</option>
+	<option value="22">10 pm</option>
+	<option value="23">11 pm</option>
+
+</select>
+                                                    <select name="ctl00$ddlHistoricMinute" id="ddlHistoricMinute" class="form-conatrol input-sm DateMinute" style="width: 80px; display: none;">
+	<option selected="selected" value=":00">:00</option>
+	<option value=":15">:15</option>
+	<option value=":30">:30</option>
+	<option value=":45">:45</option>
+
+</select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                                <div>
+                                    <div class="row" style="margin-top: 20px;">
+                                        <div class="col-xs-3" style="display: none">
+                                            <asp:label id="LabelCheckBoxFacebook" associatedcontrolid="CheckBoxFacebook">
+                                                <img id="ImagePostFacebook" src="/images/v4/facebookround_gray.png" style="width:32px;">
+                                            </asp:label>
+                                            <span class="CBFacebook"><input id="CheckBoxFacebook" type="checkbox" name="ctl00$CheckBoxFacebook"></span>
+                                        </div>
+                                        <div class="col-xs-3" style="display: none">
+                                            <asp:label id="LabelCheckBoxTwitter" associatedcontrolid="CheckBoxTwitter">
+                                                <img id="ImagePostTwitter" src="/images/v4/twitterround_gray.png" style="width:32px;">
+                                            </asp:label>
+                                            <span class="CBTwitter"><input id="CheckBoxTwitter" type="checkbox" name="ctl00$CheckBoxTwitter"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-footer bg-5">
+                                <button type="button" class="btn btn-sdm btn-default pull-left" data-dismiss="modal">
+                                    Cancel</button>
+                                <button type="button" class="btn btn-sdm btn-primary badge-5 border-5 ButtonOk ButtonUpdate ">Update Mood to 5</button>
+                                <br>
+                                <small id="Privacy" class="text-muted"><span class="glyphicon glyphicon-eye-close">
+                                </span>Visible only to you</small>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                
+                
+                <div id="SuccessUpdate" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    ×</button>
+                                <h4 class="modal-title">
+                                    Mood Updated</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Updated Successfully.
+                                </p>
+                                <div class="well well-sm">
+                                    <small>Did you know MoodPanda is volunteer funded and run?</small>
+                                    <div style="margin-top: 5px;">
+                                        <a href="/Account/Upgrade" class="btn btn-xss btn-default ">Support us - become a Patron</a>
+                                    </div>
+                                </div>
+                                <div class="well well-sm">
+                                If you feel like you're in crisis and you need urgent help, <a href="/urgent">please click here</a>.
+                                </div>
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <a href="/Feed/?Me=1" class="btn btn-ssm btn-default ButtonMyDiary pull-left">Go to My Diary</a>
+                                <button type="button" class="btn btn-dsm btn-primary btn  badge-5 border-5 ButtonOk  " data-dismiss="modal">
+                                    Done</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                
+                
+                
+    <div id="UpdateMoodWelcome" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        Login to MoodPanda</h4>
+                </div>
+                <div class="modal-body" style="padding-bottom:0;">
+                    <div class="bs-example form-horizontal" style="padding-left: 0px; padding-right: 0px;">
+                        <fieldset>
+
+                            <a id="ContentPlaceHolderContent_ButtonLoginFacebook" class="btn btn-sm btn-info" href="/fbapp" style="width: 100%;display:none">Login with Facebook</a>
+                            <a id="ContentPlaceHolderContent_HyperLinkRegister" class="btn btn-sm btn-default" href="/Register" style="width: 100%;margin-top:10px;">Create Account</a>
+
+                            <div id="ContentPlaceHolderContent_MessageError" class="alert alert-dismissable alert-danger">
+                                <strong>Error:</strong> Could not find account. <a href="/forgotpassword.aspx">Forgot
+                                    Password?</a>
+                            </div>
+                            <div class="panel panel-default" style="margin-top:8px;">
+                                <div class="panel-body">
+                                    <div class="form-group" style="margin-left: 0; margin-right: 0">
+                                        <label for="TextBoxEmail" class="control-label" style="display: block; text-align: left;
+                                            padding-top: 0;">
+                                            Or email</label>
+                                        <div class="col-lg-12">
+                                            <input name="ctl00$ContentPlaceHolderContent$TextBoxEmail" type="text" value="asgasghjd" maxlength="45" id="ContentPlaceHolderContent_TextBoxEmail" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="margin-left: 0; margin-right: 0">
+                                        <label for="inputEmail" class="control-label" style="display: block; text-align: left;
+                                            padding-top: 0;">
+                                            Password</label>
+                                        <div class="col-lg-12">
+                                            <input name="ctl00$ContentPlaceHolderContent$TextBoxPassword" type="password" id="ContentPlaceHolderContent_TextBoxPassword" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                   <div><small>MoodPanda uses cookies. By continuing to use MoodPanda you accept this.</small></div>
+                                    <input type="submit" name="ctl00$ContentPlaceHolderContent$ButtonLogin" value="Login" id="ContentPlaceHolderContent_ButtonLogin" class="btn btn-sm btn-primary  pull-right">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                
+                <div id="ContentPlaceHolderContent_AppStore" class="modal-footer" style="text-align: center;">
+                
+                    <a href="https://itunes.apple.com/gb/app/moodpanda-mood-diary-mood/id447452124?mt=8&amp;uo=4">
+                        <img alt="MoodPanda iPhone App" src="/images/v3/appstore63.png" style="height: 40px;
+                            margin-right: 20px;">
+                        </a><a href="https://play.google.com/store/apps/details?id=com.MoodPanda">
+                            <img alt="MoodPanda Android App on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" style="height: 60px;">
+                        </a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="list-group">
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <footer>
+                
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#UpdateMoodWelcome').modal({ show: 'true', backdrop: 'static', keyboard: false });
+
+
+        });
+    </script>
+
+            </footer>
+    </div>
+    <div style="height: 200px">
+    </div>
+    <script type="text/javascript">
+            $(document).ready(function () {
+
+                //LOADNG DIV
+                $("#LoadDiv").removeClass('loading');
+                $(".ShowLoader").click(function (event) {
+                    event.preventDefault();
+                    $("#LoadDiv").addClass('loading');
+                    window.location.href = this.href;
+                });
+
+
+
+                //datepicker stuff
+                $(".DateHour").hide();
+                $(".DateMinute").hide();
+
+                
+                $(".ResetOlder").click(function () {
+                       $("#DatePicker").datepicker("show");
+                }); 
+
+                 // date
+                $(".ResetYesterday").click(function () {
+                    var d = new Date();
+                    d.setDate(d.getDate()-1);
+                     var year = d.getFullYear();
+                    var month = d.getMonth()+1;
+                    var day = d.getDate();
+                    if (day < 10) {
+                          day = '0' + day;
+                        }
+                        if (month < 10) {
+                          month = '0' + month;
+}
+                    $("#DatePicker").val(year +"-" + month + "-" + day);
+                    $(".DateHour").show();
+                $(".DateMinute").show();
+                   
+                }); 
+                 $(".Reset2day").click(function () {
+                    var d = new Date();
+                    d.setDate(d.getDate()-2);
+                    var year = d.getFullYear();
+                    var month = d.getMonth()+1;
+                    var day = d.getDate();
+                    if (day < 10) {
+                      day = '0' + day;
+                    }
+                    if (month < 10) {
+                      month = '0' + month;
+                    }
+                      $("#DatePicker").val(year +"-" + month + "-" + day);
+                    $(".DateHour").show();
+                $(".DateMinute").show();
+                });
+                  $(".Reset3day").click(function () {
+                    var d = new Date();
+                    d.setDate(d.getDate()-3);
+                    var year = d.getFullYear();
+                    var month = d.getMonth()+1;
+                    var day = d.getDate();
+                    if (day < 10) {
+                      day = '0' + day;
+                    }
+                    if (month < 10) {
+                      month = '0' + month;
+                    }
+                      $("#DatePicker").val(year +"-" + month + "-" + day);
+                    $(".DateHour").show();
+                $(".DateMinute").show();
+                });
+                //reset date
+                $(".ResetNow").click(function () {
+                    $("#DatePicker").val('NOW');
+                    $(".DateHour").hide();
+                    $(".DateMinute").hide();
+                });
+
+                $("#ShowAdvanced").click(function () {
+                    $("#Advanced").show();
+                });
+
+                //show/hide time fields
+                $("#DatePicker").change(function () {
+                    if ($("#DatePicker").val() != 'NOW') {
+                        $(".DateHour").show();
+                        $(".DateMinute").show();
+                        $(".DateHour").css("display", "inline");
+                        $(".DateMinute").css("display", "inline");
+                    }
+                    else {
+                        $(".DateHour").hide();
+                        $(".DateMinute").hide();
+                    }
+                });
+                $("#DatePicker").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    showOn: "button",
+                    buttonImage: "/images/v4/calendar.png",
+                    buttonImageOnly: true,
+                    maxDate: "+0M +0D",
+                    dateFormat: "yy-mm-dd"
+                });
+                $(".ui-datepicker-trigger").css("left", "-122px");
+                $(".ui-datepicker-trigger").css("top", "-3px");
+                $(".ui-datepicker-trigger").css("position", "relative");
+
+
+
+                //SEARCH ENTER
+                $(".SearchInput").bind("keydown", function (event) {
+                    var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+                    if (keycode == 13) {
+                        $('.ButtonSearch').click();
+                        return false;
+                    } else {
+                        return true;
+                    }
+                });
+
+                //SIDE NAV
+                $('[data-toggle=offcanvas]').click(function () {
+                    $('.row-offcanvas').toggleClass('active')
+                });
+
+                //static side nav 
+                //            $("#fixednav").affix({
+                //                offset: { 
+                //                    top: 30 
+                //                }
+                //            });
+
+                //SEARCH
+                $('.ButtonSearch').click(function () {
+                    var Search = $('#TextSearch').val();
+                    $('#TextSearch').val('Loading...');
+                    window.location.href = "/Feed/?q=" + Search;
+                });
+
+                //CHAR COUNT
+                $(".UpdateMoodText").charCounter(400, {
+                    container: "#CharacterCounter"
+                });
+
+                //tooltips
+                $("[rel='tooltip']").tooltip();
+
+                //MOOD SLIDER
+                $("#slider-range-min").slider({
+                    range: "min",
+                    value: 5,
+                    min: 0,
+                    max: 10,
+                    step: 1,
+                    slide: function (event, ui) {
+                        $("#amount").val(ui.value);
+                        $(".ButtonUpdate").text("Update Mood to " + ui.value);
+                        $(".ui-slider-range").removeClass('badge-0');
+                        $(".ui-slider-range").removeClass('badge-1');
+                        $(".ui-slider-range").removeClass('badge-2');
+                        $(".ui-slider-range").removeClass('badge-3');
+                        $(".ui-slider-range").removeClass('badge-4');
+                        $(".ui-slider-range").removeClass('badge-5');
+                        $(".ui-slider-range").removeClass('badge-6');
+                        $(".ui-slider-range").removeClass('badge-7');
+                        $(".ui-slider-range").removeClass('badge-8');
+                        $(".ui-slider-range").removeClass('badge-9');
+                        $(".ui-slider-range").removeClass('badge-10');
+                        $(".ui-slider-range").addClass('badge-' + ui.value);
+
+                        
+                        
+                        $(".modal-content").removeClass('border-wide-0');
+                        $(".modal-content").removeClass('border-wide-1');
+                        $(".modal-content").removeClass('border-wide-2');
+                        $(".modal-content").removeClass('border-wide-3');
+                        $(".modal-content").removeClass('border-wide-4');
+                        $(".modal-content").removeClass('border-wide-5');
+                        $(".modal-content").removeClass('border-wide-6');
+                        $(".modal-content").removeClass('border-wide-7');
+                        $(".modal-content").removeClass('border-wide-8');
+                        $(".modal-content").removeClass('border-wide-9');
+                        $(".modal-content").removeClass('border-wide-10');
+                        $(".modal-content").addClass('border-wide-' + ui.value);
+                        
+                        $(".ButtonOk").removeClass('border-0');
+                        $(".ButtonOk").removeClass('border-1');
+                        $(".ButtonOk").removeClass('border-2');
+                        $(".ButtonOk").removeClass('border-3');
+                        $(".ButtonOk").removeClass('border-4');
+                        $(".ButtonOk").removeClass('border-5');
+                        $(".ButtonOk").removeClass('border-6');
+                        $(".ButtonOk").removeClass('border-7');
+                        $(".ButtonOk").removeClass('border-8');
+                        $(".ButtonOk").removeClass('border-9');
+                        $(".ButtonOk").removeClass('border-10');
+                        $(".ButtonOk").addClass('border-' + ui.value);
+                        
+                        $(".ButtonOk").removeClass('badge-0');
+                        $(".ButtonOk").removeClass('badge-1');
+                        $(".ButtonOk").removeClass('badge-2');
+                        $(".ButtonOk").removeClass('badge-3');
+                        $(".ButtonOk").removeClass('badge-4');
+                        $(".ButtonOk").removeClass('badge-5');
+                        $(".ButtonOk").removeClass('badge-6');
+                        $(".ButtonOk").removeClass('badge-7');
+                        $(".ButtonOk").removeClass('badge-8');
+                        $(".ButtonOk").removeClass('badge-9');
+                        $(".ButtonOk").removeClass('badge-10');
+                        $(".ButtonOk").addClass('badge-' + ui.value);
+
+                        
+                        $(".modal-footer").removeClass('bg-0');
+                        $(".modal-footer").removeClass('bg-1');
+                        $(".modal-footer").removeClass('bg-2');
+                        $(".modal-footer").removeClass('bg-3');
+                        $(".modal-footer").removeClass('bg-4');
+                        $(".modal-footer").removeClass('bg-5');
+                        $(".modal-footer").removeClass('bg-6');
+                        $(".modal-footer").removeClass('bg-7');
+                        $(".modal-footer").removeClass('bg-8');
+                        $(".modal-footer").removeClass('bg-9');
+                        $(".modal-footer").removeClass('bg-10');
+                        $(".modal-footer").addClass('bg-' + ui.value);
+
+                        
+                        
+                        if (ui.value < 1) {
+                            $("#Crisis").show()
+                        }
+                        else {
+                            $("#Crisis").hide()
+                        }
+                    }
+                }).draggable();
+                $(".ButtonUpdate").text("Update Mood to " + $("#slider-range-min").slider("value"));
+                $(".ui-slider-range").addClass('badge-5');
+                $("#Crisis").hide()
+
+                //UPDATE
+                $(".ButtonUpdate").click(function () {
+                    var find = this.id;
+                    var IDS = find.split(",");
+                    var Comment = $('.UpdateMoodText').val();
+                    Comment = Comment.replace(/(<([^>]+)>)/ig, "");
+                    //Comment = Comment.replace("<","(");
+                    Comment = Comment.replace(">", ")");
+                    Comment = Comment.replace(/"/g, "'");
+                    var Rating = $("#slider-range-min").slider("value")
+                    var Facebook = $("input.CBFacebook, span.CBFacebook input").is(':checked');
+                    var Twitter = $("input.CBTwitter, span.CBTwitter input").is(':checked');
+                    var Date = $("#DatePicker").val();
+                    var DateHour = $(".DateHour").val();
+                    var DateMinute = $(".DateMinute").val();
+                    if (Date != "NOW") {
+                        Date = Date + " " + DateHour + DateMinute;
+                    }
+                    $("#DatePicker").val('NOW');
+                    $(".DateHour").hide();
+                    $(".DateMinute").hide();
+                    //alert(Date);
+                    $.ajax({
+                        type: "POST",
+                        url: "/WebService/WebServiceUpdate.asmx/Update",
+                        //string Comment, string Value, string DateTime, string Facebook, string Twitter
+                        data: '{Comment: "' + Comment + '",Value: "' + Rating + '",DT: "' + Date + '",Facebook: "' + Facebook + '",Twitter: "' + Twitter + '"}',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                        
+                            //alert(response);
+                            $('#UpdateMood').modal('hide');
+                            $('#SuccessUpdate').modal('show');
+                            
+                        },
+                         error: function (xhr, ajaxOptions, thrownError) {
+                         alert("Your MoodPanda session has expired - we need to refresh to re-establish a connection - your update was not completed");
+                         location.reload();
+      
+      }
+                      
+                    });
+                });
+            });
+    </script>
+    <!--script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-350184-11', 'moodpanda.com');
+        ga('send', 'pageview');
+
+    </script-->
+    </form>
+
+
+<div class="modal-backdrop fade in"></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

@@ -1,0 +1,3665 @@
+<html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="1140"><meta name="viewport" content="initial-scale=1.0,user-scalable=no"><meta name="description" content="With Mood Panda you can track your mood and be part of a lovely community; Also available on iOS and Android App Store. Create an interactive Mood Diary/Mood Journal, Create graphs of your 
+        mood over the day, month, year; Post your happiness to Facebook/Twitter;  "><meta name="keywords" content="Allow you to track your mood, Keep a historical record of your ups and downs, Mood Graphs over the day, month, year,
+     Compare your mood to the rest of the world,Reveal fascinating facts about people's mood,Share your mood with friends"> <meta property="og:image" content="http://moodpanda.com/images/v4/Icon512.png"><meta property="og:title" content="MoodPanda.com - Your Interactive Mood Diary"><meta property="og:site_name" content="MoodPanda.com"><link rel="apple-touch-icon" href="/images/v4/Icon120.png"><link rel="icon" type="image/png" href="/images/v4/Icon120.png"><link rel="SHORTCUT ICON" href="/images/v4/Icon120.png"><meta property="fb:app_id" content="104485459589872"><title>
+	
+        MoodPanda - Your Mood Diary - Rate and Track your mood over time
+</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/BootStrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/styles/MoodPandaResponsive.css?r=34" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <!--script src="/scripts/jquery-ui-1.10.4.custom.min.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.ui.touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="/scripts/jquery.charcounter.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="/BootStrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .badge-0, .badge-1, .badge-2, .badge-3, .badge-4
+        {
+            background: none !important;
+            background-color: #f97a7a !important;
+        }
+        
+        .badge-5
+        {
+            background: none !important;
+            background-color: #F39C12 !important;
+        }
+        
+        .badge-6, .badge-7, .badge-8, .badge-9, .badge-10
+        {
+            background: none !important;
+            background-color: #AFD246 !important;
+        }
+        
+        .border-0, .border-1, .border-2, .border-3, .border-4
+        {
+            border: solid 2px #f97a7a !important;
+            background-color: #fff;
+        }
+        
+        .border-5
+        {
+            border: solid 2px #F39C12 !important;
+            background-color: #fff;
+        }
+        
+        .border-6, .border-7, .border-8, .border-9, .border-10
+        {
+            border: solid 2px #AFD246 !important;
+            background-color: #fff;
+        }
+        
+        .loading
+        {
+            display: block !important;
+        }
+        
+        #LoadDiv
+        {
+            display: block;
+            position: fixed;
+            top: 46px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+        }
+    </style>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body style="">
+    <form method="post" action="" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTEyODg5MzcyNw9kFgJmD2QWAgIDD2QWEAIED2QWAgIBDxYCHgdWaXNpYmxlZ2QCBQ8WAh8AaGQCBg8WAh8AZ2QCCw8QDxYCHgdFbmFibGVkaGRkZGQCDQ8QDxYCHwFoZGRkZAIODxYCHwBoZAIQD2QWCGYPZBYIZg8PFgIeCEltYWdlVXJsBRkvaW1hZ2VzL2F2YXRhci8xMTExLmpwZz8xZGQCAQ9kFgQCAQ8WAh8AaGQCAw8WAh8AaGQCAg8WAh8AZxYGAgEPFgIeBFRleHQFATBkAgIPFgIfAwUBMGQCBA8WAh8DBQEwZAIDDxYCHwBoFgJmD2QWAgICD2QWAmYPFgIfAGhkAgUPFgIfAGdkAgYPFgIfAGdkAgwPDxYCHwBnZBYCAgEPFgIfAwVIU2F5IGhlbGxvIDxzbWFsbCBjbGFzcz0icHVsbC1yaWdodCI+PGEgaHJlZj0iL0Rpc2NvdmVyIj5Nb3JlPC9hPjwvc21hbGw+ZAIRDxYCHwBnZGQV86n/ASYUVzm8Q7WKW/m65hdC7pdJxQLJN9A280mWNg==">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EA4A5429">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACJmiyocVr+mIxrpTcNNpifI6wHH3V1W6wbgcvkpQk2CvPpFf1AB6BtcknQjrcg8kjlMI3CIqVgRbr5BJ+82ZLwCOh8QOxdFD8GXNZmls3Nc03onnJ7hgNrYNQ35LW07Jl9wuvflIDAYktBFly4topaO8oZgQRfWG+OcaPaoJ3EyQ0vZEUrerrrv6pyJJRuj0M4NNve1zP3riwbIRwtsDgnr26b5O4u0MLHmSEs31HV47uBpQhqEGGZjtiVk+vLrGSWbOCAHuOoDDfTTv8fqwCT+qETuemTK39SsAzF26tXtsbC51J0eqUVnY/0NmpeeRCYomvw+iSEqy/Cw4ZZn24FqMGxN+gMkXIQ9yQXk+OyIO5hDyglCfjCq/PgNyW/44EKGsiwar0vurKq1ymbymWdNGjkXufYeL7UHmrNI0aGkMxtDQMsecl9ZQo6UKcF9WOt3nPoT5G9JGt8peMMLwdUZUXOxyYjMIj9Y6/V3es1kIC1+S6bv43+QHMsQU/p7oqpkUi4sUbp0e2hbd/uVFksfoidAXrr27HaFKlmX9wk/WnhpBcg+PmqVb+6nc0/pdo72Pn3b+L/Z+H0LfwtdPqKpuuojDHzSfAZazJKXRYEk87E1cF8++3K8giXaP4z5tY+sY+Y9mEwR9i+vXlaOLlwFkwrOTnvUQTxbxPKHN73qjSPHC0XGl2zmE6sR/+YZaWMVIjZQCvfSuRcuop+8TRCOgEszjnXOyUs27leCYi3l+747ul4e5/9w99SbQJFBHHU=">
+</div>
+    <div class="container">
+        
+        <div id="LoadDiv" style="display: none;">
+            <div class="well well-sm">
+                <img src="/homepage/img/mp-trans-eyes.svg" width="20@">&nbsp;Loading
+            </div>
+        </div>
+        <div class="navbar navbar-default navbar-fixed-top navbar-opaque">
+        </div>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    
+                    <ul class="nav nav-tabs">
+                        
+                        <li id="LIWorld" role="presentation" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="/homepage/img/mp-trans-eyes.svg" width="20">
+                            <span class="navbar-hidesmall">Community</span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    
+                                    <a href="/Feed">
+                                        &nbsp;World feed</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    
+                                    <a href="/Feed?Inbox=1">
+                                        My conversations </a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li id="LIFollowing">
+                                    
+                                    <a href="/Feed?Following=1">
+                                        People I'm following</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/Account/Upgrade/?Me=1">
+                                    Become a MoodPanda Patron</a> </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    
+                                    <a href="/Contact">
+                                        Contact ChiefPanda</a> </li>
+                            </ul>
+                        </li>
+                        <li id="LIMe" role="presentation" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;<span class="navbar-hidesmall">Me</span><span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    
+                                    <a href="/Feed/?Me=1">
+                                        &nbsp;My updates</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li id="LinkGraphsNoFitbit"><a href="/Feed/Graphs/?u=7675915">
+                                    &nbsp;My graphs</a></li>
+                                
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/Feed/Calendar/?u=7675915">
+                                    &nbsp;My Calendar</a></li><li role="separator" class="divider"></li>
+                                <li><a href="/Feed/?u=7675915&amp;MeHappy=1">
+                                    &nbsp;Happy Times</a></li><li role="separator" class="divider"></li>
+                                <li><a href="/Feed/?u=7675915&amp;MeUnHappy=1">
+                                    &nbsp;Sad Times</a></li><li role="separator" class="divider hidden-xs"></li>
+                                <li class="hidden-xs"><a href="/Feed/Graphs/Huddle/?u=7675915">
+                                    &nbsp;My Huddle</a></li><li role="separator" class="divider"></li>
+                                
+                                
+                                <li><a href="/Feed/Achievements/?u=7675915">
+                                    &nbsp;My Achievements </a></li>
+                            </ul>
+                        </li>
+                        <li id="Settings" class="dropdown open"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span><span class="navbar-hidesmall">
+                                &nbsp;Account </span><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Account">
+                                    Edit profile</a></li><li role="separator" class="divider"></li>
+                                <li><a href="/Account/Avatar">
+                                    Avatar</a></li><li role="separator" class="divider"></li>
+                                <li><a href="/Account/Connect">
+                                    Social media</a></li><li role="separator" class="divider"></li>
+                                <li id="Li1"><a href="/Account/Fitbit">
+                                    Fitbit</a></li><li role="separator" class="divider"></li>
+                                <li><a href="/Account/Privacy">
+                                    Privacy settings</a></li><li role="separator" class="divider"></li>
+                                <li><a href="/Account/Download">
+                                    Download/Print</a></li><li role="separator" class="divider"></li>
+                                <li><a href="/Account/Delete">
+                                    Delete Account</a></li>
+                                <li role="separator" class="divider"></li>
+                                
+                                <li id="LinkLogout"><a href="/Logout">
+                                    <span class="glyphicon glyphicon-off" style="margin-right: 10px;"></span>Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            
+                            <a id="LinkUpdate" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#UpdateMood" style="margin-left: 5px; border-radius: 3px;
+                                top: 6px; position: relative; text-decoration: none; cursor: pointer; padding: 6px 9px !important">
+                                <span class=""></span><span class="glyphicon glyphicon-edit"></span>&nbsp; <span class="navbar-hidesmalla">Update mood</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </div>
+    <div class="container edgetoedge">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-12 ">
+                
+                <div id="UpdateMood" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content border-wide-5">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    ×</button>
+                                <h4 class="modal-title">
+                                    Rate Your Happiness</h4>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <div class="row">
+                                    <div class="col-xs-1" style="text-align: left;">
+                                        <img style="position: relative; top: -6px; opacity: 0.4;" src="/images/v4/sad.png">
+                                    </div>
+                                    <div class="col-xs-10" style="text-align: center;">
+                                    </div>
+                                    <div class="col-xs-1" style="text-align: right;">
+                                        <img style="position: relative; top: -6px; opacity: 0.4;" src="/images/v4/smile.png">
+                                    </div>
+                                </div>
+                                <div id="slider-range-min" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all ui-draggable" aria-disabled="false">
+                                <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min badge-5" style="width: 50%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 50%;"></a></div>
+                                <br>
+                                  
+                                <div class="alert alert-danger alert-sm" id="Crisis" style="display: none;">
+                                   If you feel at risk, please contact someone:
+                                    <br><a href="/urgent" class="btn btn-danger btn-xs pull-right" target="_blank">Find urgent help</a>
+                                    <div class="clearfix"></div>
+                                </div>
+
+
+                                <div>
+                                    
+                                   
+                                </div>
+                                
+                                <textarea name="ctl00$TextBoxUpdateMoodTag" rows="6" cols="20" id="TextBoxUpdateMoodTag" class="form-control UpdateMoodText" placeholder="What's happening? Include #hashtags" style="border-width:1px;border-style:solid;width:100%;"></textarea>
+                                     
+                                    <div id="CharacterCounter" class="pull-right text-muted" style="">400 chars remaining</div>
+                                    <div class="clearfix"></div>
+                                <div class="well well-sm" style="margin-top: 5px">
+                                    <div id="Advanced">
+                                        <label style="margin-right: 5px;">
+                                            Date
+                                        </label>
+                                        <input type="text" id="DatePicker" value="NOW" readonly="" style="margin-left: 20px;
+                                            width: 100px; background: transparent !IMPORTANT; border: 0 !IMPORTANT;" class="hasDatepicker"><img class="ui-datepicker-trigger" src="/images/v4/calendar.png" alt="..." title="..." style="left: -122px; top: -3px; position: relative;">
+                                        <div>
+                                            <div class="ResetOlder btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                               Older
+                                            </div>
+                                            <div class="Reset3day btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                                3 days ago
+                                            </div>
+                                            <div class="Reset2day btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                                2 days ago
+                                            </div>
+                                            <div class="ResetYesterday btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                                Yesterday
+                                            </div>
+                                            <div class="ResetNow btn btn-default btn-xs" style="cursor: pointer; margin-top: 10px;margin-right:10px">
+                                                Now
+                                            </div>
+                                            <div>
+                                                <div style="margin-top: 5px;">
+                                                    <select name="ctl00$ddlHistoricHour" id="ddlHistoricHour" class="form-contarol input-sm DateHour" style="width: 120px; display: none;">
+	<option value="00">Midnight</option>
+	<option value="01">1 am</option>
+	<option value="02">2 am</option>
+	<option value="03">3 am</option>
+	<option value="04">4 am</option>
+	<option value="05">5 am</option>
+	<option value="06">6 am</option>
+	<option value="07">7 am</option>
+	<option value="08">8 am</option>
+	<option value="09">9 am</option>
+	<option value="10">10 am</option>
+	<option value="11">11 am</option>
+	<option value="12">Midday</option>
+	<option value="13">1 pm</option>
+	<option value="14">2 pm</option>
+	<option value="15">3 pm</option>
+	<option value="16">4 pm</option>
+	<option value="17">5 pm</option>
+	<option value="18">6 pm</option>
+	<option value="19">7 pm</option>
+	<option value="20">8 pm</option>
+	<option value="21">9 pm</option>
+	<option value="22">10 pm</option>
+	<option value="23">11 pm</option>
+
+</select>
+                                                    <select name="ctl00$ddlHistoricMinute" id="ddlHistoricMinute" class="form-conatrol input-sm DateMinute" style="width: 80px; display: none;">
+	<option value=":00">:00</option>
+	<option value=":15">:15</option>
+	<option value=":30">:30</option>
+	<option value=":45">:45</option>
+
+</select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                                <div>
+                                    <div class="row" style="margin-top: 20px;">
+                                        <div class="col-xs-3" style="display: none">
+                                            <asp:label id="LabelCheckBoxFacebook" associatedcontrolid="CheckBoxFacebook">
+                                                <img id="ImagePostFacebook" src="/images/v4/facebookround_gray.png" style="width:32px;">
+                                            </asp:label>
+                                            <span class="aspNetDisabled CBFacebook"><input id="CheckBoxFacebook" type="checkbox" name="ctl00$CheckBoxFacebook" disabled="disabled"></span>
+                                        </div>
+                                        <div class="col-xs-3" style="display: none">
+                                            <asp:label id="LabelCheckBoxTwitter" associatedcontrolid="CheckBoxTwitter">
+                                                <img id="ImagePostTwitter" src="/images/v4/twitterround_gray.png" style="width:32px;">
+                                            </asp:label>
+                                            <span class="aspNetDisabled CBTwitter"><input id="CheckBoxTwitter" type="checkbox" name="ctl00$CheckBoxTwitter" disabled="disabled"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-footer bg-5">
+                                <button type="button" class="btn btn-sdm btn-default pull-left" data-dismiss="modal">
+                                    Cancel</button>
+                                <button type="button" class="btn btn-sdm btn-primary badge-5 border-5 ButtonOk ButtonUpdate ">Update Mood to 5</button>
+                                <br>
+                                
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                
+                
+                <div id="SuccessUpdate" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    ×</button>
+                                <h4 class="modal-title">
+                                    Mood Updated</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Updated Successfully.
+                                </p>
+                                <div class="well well-sm">
+                                    <small>Did you know MoodPanda is volunteer funded and run?</small>
+                                    <div style="margin-top: 5px;">
+                                        <a href="/Account/Upgrade" class="btn btn-xss btn-default ">Support us - become a Patron</a>
+                                    </div>
+                                </div>
+                                <div class="well well-sm">
+                                If you feel like you're in crisis and you need urgent help, <a href="/urgent">please click here</a>.
+                                </div>
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <a href="/Feed/?Me=1" class="btn btn-ssm btn-default ButtonMyDiary pull-left">Go to My Diary</a>
+                                <button type="button" class="btn btn-dsm btn-primary btn  badge-5 border-5 ButtonOk  " data-dismiss="modal">
+                                    Done</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                
+                
+                
+    <script type="text/javascript" src="/Scripts/jquery.sparkline.min.js"></script>
+    <link href="/styles/feed.css?1222351" rel="stylesheet">
+    
+    
+    <div class="col col-xs-12" style="margin-top: 15px; display: none;">
+        <div class="alert alert-warning">
+            MAINTENANCE - There is a known issue sending hugs and comments on certain Android
+            phones. We're working on it!
+        </div>
+    </div>
+    
+    
+     
+     <div id="ContentPlaceHolderContent_WorldHeader" class="media" style="overflow: visible !important;">
+        <div class="media-content border-wide-10 rounded-top-corner" style="overflow: visible !important;">
+            Community. Be kind.<br>
+            <a href="/urgent" class="btn btn-xs btn-danger pull-right">I'm in crisis</a>
+            <a href="/contact" style="margin-right:5px" class="btn btn-xs btn-default pull-right">Report abuse</a>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div id="ContentPlaceHolderContent_PublicFeedHeader" class="media" style="overflow: visible !important; display: none; background-color: #79a8c3;">
+        <div class="media-content  border-wide-10 rounded-top-corner" style="overflow: visible !important;">
+            <a href="/Account/Privacy/" class="btn btn-default btn-sm">Control my privacy</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    <input type="hidden" name="ctl00$ContentPlaceHolderContent$HiddenFieldCommentLimit" id="ContentPlaceHolderContent_HiddenFieldCommentLimit" value="0">
+    
+            <div class="StartOfFeed">
+            </div>
+        
+            
+            
+
+            <div class="p7675914 media m1  border-wide-5 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675914">
+                    <img class="media-object border-5" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-5 pull-right">
+                            5</span> <span class="name pull-left"><a href="/Feed/?u=7675914">
+                                Jennifer
+                                B</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="1" class="HFSparkline" value="0,0,0">
+                    
+                </div>
+                <div id="sparkline1" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-5 dborder-bottom-5">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-5 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        6 mins ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs1 btn btn-primary badge-5 border-5 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675914,1286650,mcw1,1,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs1">
+                                        0</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675914">
+                
+            </div>
+            
+            
+            <div class="p7675914 mcw1  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_0" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr1"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-5  border-5   btn-sm ButtonReply mcr1" type="button" id="7675914,1286650,mcw1,mcr1,1,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant1">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675914 media m2  border-wide-5 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675914">
+                    <img class="media-object border-5" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-5 pull-right">
+                            5</span> <span class="name pull-left"><a href="/Feed/?u=7675914">
+                                Jennifer
+                                B</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="2" class="HFSparkline" value="0,0,0">
+                    
+                </div>
+                <div id="sparkline2" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-5 dborder-bottom-5">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-5 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        24 hours ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs2 btn btn-primary badge-5 border-5 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675914,1286649,mcw2,2,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs2">
+                                        0</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675914">
+                
+            </div>
+            
+            
+            <div class="p7675914 mcw2  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_1" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr2"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-5  border-5   btn-sm ButtonReply mcr2" type="button" id="7675914,1286649,mcw2,mcr2,2,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant2">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675914 media m3  border-wide-5 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675914">
+                    <img class="media-object border-5" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-5 pull-right">
+                            5</span> <span class="name pull-left"><a href="/Feed/?u=7675914">
+                                Jennifer
+                                B</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="3" class="HFSparkline" value="0,0,0">
+                    
+                </div>
+                <div id="sparkline3" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-5 dborder-bottom-5">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-5 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        7 days ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs3 btn btn-primary badge-5 border-5 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675914,1286648,mcw3,3,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs3">
+                                        0</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675914">
+                
+            </div>
+            
+            
+            <div class="p7675914 mcw3  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_2" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr3"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-5  border-5   btn-sm ButtonReply mcr3" type="button" id="7675914,1286648,mcw3,mcr3,3,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant3">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            <div id="ContentPlaceHolderContent_RepeaterFeed_Div1_3" class="patron-panel">
+                <div class="media   patron-panel-media" style="">
+                    <div class="media-body media-content patron-panel-media-content" style="">
+                       <h5 class="media-heading name" style="padding-top:0;"><span class="with-background">Help MoodPanda - become a MoodPanda Patron</span></h5>
+                       <p class="patron-panel-media-content-p"><span class="with-background">MoodPanda is here to help people. </span></p>
+                       <p class="patron-panel-media-content-p"><span class="with-background">We don't use adverts, and our community is free to join</span></p>
+                       <p class="patron-panel-media-content-p"><span class="with-background">Becoming a patron is a way to gift us with your support, to help us do what we do, and to help MoodPanda be here for others</span></p>
+                       
+                       <p class="patron-panel-media-content-p"><small class="with-background">Thank you for being a part of our community. </small></p><small class="with-background">
+                       <div style="text-align:center">
+                       <a href="/account/upgrade/" class="btn btn-primary">Find out how to become a patron</a>
+                       </div>
+                    </small></div><small class="with-background">
+                </small></div><small class="with-background">
+            </small></div><small class="with-background">
+            
+
+            <div class="p7662423 media m4  border-wide-6 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7662423">
+                    <img class="media-object border-6" src="/images/avatar/1121.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-6 pull-right">
+                            6</span> <span class="name pull-left"><a href="/Feed/?u=7662423">
+                                (( _ _ ))..zzzZ
+                                Z</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                <a href="/Account/Upgrade">
+                <span title="Done 90+ Days of updates. Next goal 120 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                3+ MONTHS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a>
+                            </span><span style="opacity: 0.9; display: none;">
+                                <a href="/Account/Upgrade">
+                <span title="Done 90+ Days of updates. Next goal 120 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                3+ MONTHS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="4" class="HFSparkline" value="-3,0,-2,-3,1,3,0,0,1,1">
+                    
+                </div>
+                <div id="sparkline4" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-6 dborder-bottom-6">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-6 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        13 mins ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs4 btn btn-primary badge-6 border-6 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7662423,1286646,mcw4,4,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs4">
+                                        0</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7662423">
+                
+            </div>
+            
+            
+            <div class="p7662423 mcw4  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_3" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr4"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-6  border-6   btn-sm ButtonReply mcr4" type="button" id="7662423,1286646,mcw4,mcr4,4,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant4">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7643107 media m5  border-wide-5 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7643107">
+                    <img class="media-object border-5" src="/images/avatar/1120.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-5 pull-right">
+                            5</span> <span class="name pull-left"><a href="/Feed/?u=7643107">
+                                Anna
+                                D</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+<img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+</span>
+            </a>&nbsp;
+            
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+PATRON
+</span>
+            </a>
+            
+                            </span><span style="opacity: 0.9; display: none;">
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+<img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+SUPPORTER <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+</span>
+            </a>
+            </span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="5" class="HFSparkline" value="2,2,2,1,2,-1,1,1,-1,0">I feel low even though I rationally know it isn't worth it. I found out today that my password for my subscription for a magazine (from abroad) doesn't work. I wrote to the client service of the company and they didn't answer me. I haven't found any button to generate a new password (or in fact there is, but it only shows you a web page with the contact info of the company). And they haven't</div>
+                <div id="sparkline5" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-5 dborder-bottom-5">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-5 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        17 mins ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs5 btn btn-primary badge-5 border-5 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7643107,1286645,mcw5,5,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs5">
+                                        1</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7643107">
+                
+                <div class="p7643107 media media-comment pull-righta " id="media-comment1286645" style="border-bottom: solid 0px #84b7d6">
+                    <a class="pull-left" href="/Feed/?u=7643107">
+                         <img class="media-object" src="/images/avatar/1120.jpg?1" style="width: 64px; height: 64px;opacity:0.8">
+                    </a>
+                    <div class="media-body media-body-comment">
+                        <h5 class="media-heading media-heading-comment">
+                            <a href="/Feed/?u=7643107">Anna D</a></h5>
+                            <h6 style="margin-top:2px;">
+                                <span style="opacity:0.9;"> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+<img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+</span>
+            </a>&nbsp;
+            &nbsp;
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+PATRON
+</span>
+            </a>
+            </span>
+                            </h6>
+            
+                    </div>
+                    <div class="media-body-comment-tag ">
+                    <p>answered yet. I know it will be solved as everything, but my brain just hates knowing that something is wrong. Even though it will most likely be solved in a week and that I might not have time to read it at weekend. Rationally I know all of this,</p>
+           
+                    </div>
+                <div class="media-body-comment-date"><small class="text-muteda">  15 mins ago </small></div>
+                </div>
+                <div class="p7643107 media media-comment pull-righta " id="media-comment1286645" style="border-bottom: solid 0px #84b7d6">
+                    <a class="pull-left" href="/Feed/?u=7643107">
+                         <img class="media-object" src="/images/avatar/1120.jpg?1" style="width: 64px; height: 64px;opacity:0.8">
+                    </a>
+                    <div class="media-body media-body-comment">
+                        <h5 class="media-heading media-heading-comment">
+                            <a href="/Feed/?u=7643107">Anna D</a></h5>
+                            <h6 style="margin-top:2px;">
+                                <span style="opacity:0.9;"> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+<img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+</span>
+            </a>&nbsp;
+            &nbsp;
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+PATRON
+</span>
+            </a>
+            </span>
+                            </h6>
+            
+                    </div>
+                    <div class="media-body-comment-tag ">
+                    <p>but it's still there. I hate my brain sometimes.</p>
+           
+                    </div>
+                <div class="media-body-comment-date"><small class="text-muteda">  15 mins ago </small></div>
+                </div>
+ <div class="p7662423 media media-comment pull-righta " id="media-comment1286645" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7662423"> 🐼Hugs  <small> - (( _ _ ))..zzzZ Z</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7643107 mcw5  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_4" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr5"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-5  border-5   btn-sm ButtonReply mcr5" type="button" id="7643107,1286645,mcw5,mcr5,5,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant5">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675870 media m6  border-wide-2 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675870">
+                    <img class="media-object border-2" src="/images/avatar/1112.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-2 pull-right">
+                            2</span> <span class="name pull-left"><a href="/Feed/?u=7675870">
+                                Andrew
+                                M</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                <a href="/Account/Upgrade">
+                <span title="Done 5+ Days of updates. Next goal 7 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                5+ DAYS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a>
+                            </span><span style="opacity: 0.9; display: none;">
+                                <a href="/Account/Upgrade">
+                <span title="Done 5+ Days of updates. Next goal 7 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                5+ DAYS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="6" class="HFSparkline" value="0,2,-1,-2,-3">Feeling up and down all day. Mostly down, I've rang different numbers and I'm not rally sure what to do. I don't want to go to A&amp;E but I feel bad</div>
+                <div id="sparkline6" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-2 dborder-bottom-2">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-2 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        28 mins ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs6 btn btn-primary badge-2 border-2 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675870,1286640,mcw6,6,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs6">
+                                        0</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675870">
+                
+                <div class="p7670946 media media-comment pull-righta " id="media-comment1286640" style="border-bottom: solid 0px #84b7d6">
+                    <a class="pull-left" href="/Feed/?u=7670946">
+                         <img class="media-object" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;opacity:0.8">
+                    </a>
+                    <div class="media-body media-body-comment">
+                        <h5 class="media-heading media-heading-comment">
+                            <a href="/Feed/?u=7670946">Alexis H</a></h5>
+                            <h6 style="margin-top:2px;">
+                                <span style="opacity:0.9;"> &nbsp;<a href="/Account/Upgrade">
+                <span title="Done 60+ Days of updates. Next goal 90 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                2+ MONTHS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a></span>
+                            </h6>
+            
+                    </div>
+                    <div class="media-body-comment-tag ">
+                    <p>The Samaritans are a great help. No judgement and no rush.</p>
+           
+                    </div>
+                <div class="media-body-comment-date"><small class="text-muteda">  25 mins ago </small></div>
+                </div>
+            </div>
+            
+            
+            <div class="p7675870 mcw6  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_5" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr6"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-2  border-2   btn-sm ButtonReply mcr6" type="button" id="7675870,1286640,mcw6,mcr6,6,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant6">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7671351 media m7  border-wide-2 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7671351">
+                    <img class="media-object border-2" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-2 pull-right">
+                            2</span> <span class="name pull-left"><a href="/Feed/?u=7671351">
+                                D
+                                W</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                <a href="/Account/Upgrade">
+                <span title="Done 30+ Days of updates. Next goal 60 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                1+ MONTHS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a>
+                            </span><span style="opacity: 0.9; display: none;">
+                                <a href="/Account/Upgrade">
+                <span title="Done 30+ Days of updates. Next goal 60 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                1+ MONTHS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="7" class="HFSparkline" value="-1,2,-3,-4,-3,-5,-2,-1,4,-3">Not great. I'm feeling down on myself. Calling the suicide prevention line now.</div>
+                <div id="sparkline7" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-2 dborder-bottom-2">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-2 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        43 mins ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs7 btn btn-primary badge-2 border-2 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7671351,1286639,mcw7,7,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs7">
+                                        3</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7671351">
+                
+ <div class="p7675870 media media-comment pull-righta " id="media-comment1286639" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7675870"> 🐼Hugs  <small> - Andrew M</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7670946 media media-comment pull-righta " id="media-comment1286639" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7670946"> 🐼Hugs  <small> - Alexis H</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7662423 media media-comment pull-righta " id="media-comment1286639" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7662423"> 🐼Hugs  <small> - (( _ _ ))..zzzZ Z</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+                <div class="p7662423 media media-comment pull-righta " id="media-comment1286639" style="border-bottom: solid 0px #84b7d6">
+                    <a class="pull-left" href="/Feed/?u=7662423">
+                         <img class="media-object" src="/images/avatar/1121.jpg?1" style="width: 64px; height: 64px;opacity:0.8">
+                    </a>
+                    <div class="media-body media-body-comment">
+                        <h5 class="media-heading media-heading-comment">
+                            <a href="/Feed/?u=7662423">(( _ _ ))..zzzZ Z</a></h5>
+                            <h6 style="margin-top:2px;">
+                                <span style="opacity:0.9;"> &nbsp;<a href="/Account/Upgrade">
+                <span title="Done 90+ Days of updates. Next goal 120 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                3+ MONTHS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a></span>
+                            </h6>
+            
+                    </div>
+                    <div class="media-body-comment-tag ">
+                    <p>Stay strong!</p>
+           
+                    </div>
+                <div class="media-body-comment-date"><small class="text-muteda">  11 mins ago </small></div>
+                </div>
+            </div>
+            
+            
+            <div class="p7671351 mcw7  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_6" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr7"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-2  border-2   btn-sm ButtonReply mcr7" type="button" id="7671351,1286639,mcw7,mcr7,7,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant7">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7664099 media m8  border-wide-5 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7664099">
+                    <img class="media-object border-5" src="/images/avatar/99908.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-5 pull-right">
+                            5</span> <span class="name pull-left"><a href="/Feed/?u=7664099">
+                                Mandy
+                                H</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+            
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">PATRON: HERO</span> </a>
+            
+                            </span><span style="opacity: 0.9; display: none;">
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter">
+          HERO   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+            </span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="8" class="HFSparkline" value="1,1,1,2,-1,1,1,2,3,0">Studying</div>
+                <div id="sparkline8" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-5 dborder-bottom-5">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-5 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        56 mins ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs8 btn btn-primary badge-5 border-5 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7664099,1286638,mcw8,8,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs8">
+                                        3</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7664099">
+                
+ <div class="p7638522 media media-comment pull-righta " id="media-comment1286638" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7638522"> 🐼Hugs  <small> - Jen B</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7643107 media media-comment pull-righta " id="media-comment1286638" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7643107"> 🐼Hugs  <small> - Anna D</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+<img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+</span>
+            </a>&nbsp;
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7662423 media media-comment pull-righta " id="media-comment1286638" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7662423"> 🐼Hugs  <small> - (( _ _ ))..zzzZ Z</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7664099 mcw8  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_7" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr8"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-5  border-5   btn-sm ButtonReply mcr8" type="button" id="7664099,1286638,mcw8,mcr8,8,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant8">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7649642 media m9  border-wide-4 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7649642">
+                    <img class="media-object border-4" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-4 pull-right">
+                            4</span> <span class="name pull-left"><a href="/Feed/?u=7649642">
+                                Spacekitten
+                                V</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter">
+   </span> </a>&nbsp;
+            
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">PATRON: GUARDIAN</span> </a>
+            
+                            </span><span style="opacity: 0.9; display: none;">
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter">
+GUARDIAN  <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter">
+           </span> </a>
+            </span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="9" class="HFSparkline" value="1,1,0,-1,0,0,0,2,1,-1">People always say they understand until things get bad and then they give hateful and egocentric reactions, giving you the feeling your in the wrong again even though I did nothing wrong</div>
+                <div id="sparkline9" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-4 dborder-bottom-4">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-4 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        58 mins ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs9 btn btn-primary badge-4 border-4 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7649642,1286637,mcw9,9,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs9">
+                                        2</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7649642">
+                
+ <div class="p7675870 media media-comment pull-righta " id="media-comment1286637" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7675870"> 🐼Hugs  <small> - Andrew M</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7643107 media media-comment pull-righta " id="media-comment1286637" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7643107"> 🐼Hugs  <small> - Anna D</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+<img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+</span>
+            </a>&nbsp;
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7649642 mcw9  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_8" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr9"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-4  border-4   btn-sm ButtonReply mcr9" type="button" id="7649642,1286637,mcw9,mcr9,9,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant9">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7548894 media m10  border-wide-6 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7548894">
+                    <img class="media-object border-6" src="/images/avatar/1125.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-6 pull-right">
+                            6</span> <span class="name pull-left"><a href="/Feed/?u=7548894">
+                                Esther
+                                B</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"></span> </a>
+            
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">PATRON: LEGEND</span> </a>
+            
+                            </span><span style="opacity: 0.9; display: none;">
+                                
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter">
+         LEGEND <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Super Gold Supporter"></span> </a>
+            </span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="10" class="HFSparkline" value="-1,0,-1,-1,0,-1,0,0,0,1">Doing better last week. Even managed to run twice. 2 more working days and then I'm off for 3 weeks</div>
+                <div id="sparkline10" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-6 dborder-bottom-6">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-6 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        1 hour ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs10 btn btn-primary badge-6 border-6 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7548894,1286636,mcw10,10,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs10">
+                                        3</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7548894">
+                
+ <div class="p7675828 media media-comment pull-righta " id="media-comment1286636" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7675828"> 🐼Hugs  <small> - AlaynnaRae P</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286636" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7643107 media media-comment pull-righta " id="media-comment1286636" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7643107"> 🐼Hugs  <small> - Anna D</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+<img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+</span>
+            </a>&nbsp;
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7548894 mcw10  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_9" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr10"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-6  border-6   btn-sm ButtonReply mcr10" type="button" id="7548894,1286636,mcw10,mcr10,10,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant10">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7670046 media m11  border-wide-0 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7670046">
+                    <img class="media-object border-0" src="/images/avatar/1113.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-0 pull-right">
+                            0</span> <span class="name pull-left"><a href="/Feed/?u=7670046">
+                                M
+                                M</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                <a href="/Account/Upgrade">
+                <span title="Done 180+ Days of updates. Next goal 1 Year" class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                6+ MONTHS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a>
+                            </span><span style="opacity: 0.9; display: none;">
+                                <a href="/Account/Upgrade">
+                <span title="Done 180+ Days of updates. Next goal 1 Year" class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                6+ MONTHS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="11" class="HFSparkline" value="-2,-4,-4,-2,-5,-5,-5,-2,-2,-5">
+                    
+                </div>
+                <div id="sparkline11" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-0 dborder-bottom-0">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-0 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        2 hours ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs11 btn btn-primary badge-0 border-0 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7670046,1286635,mcw11,11,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs11">
+                                        3</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7670046">
+                
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286635" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7675870 media media-comment pull-righta " id="media-comment1286635" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7675870"> 🐼Hugs  <small> - Andrew M</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7643107 media media-comment pull-righta " id="media-comment1286635" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7643107"> 🐼Hugs  <small> - Anna D</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+<img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+</span>
+            </a>&nbsp;
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7670046 mcw11  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_10" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr11"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-0  border-0   btn-sm ButtonReply mcr11" type="button" id="7670046,1286635,mcw11,mcr11,11,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant11">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675909 media m12  border-wide-2 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675909">
+                    <img class="media-object border-2" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-2 pull-right">
+                            2</span> <span class="name pull-left"><a href="/Feed/?u=7675909">
+                                Arina
+                                R</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="12" class="HFSparkline" value="-5,-5,-3">
+                    
+                </div>
+                <div id="sparkline12" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-2 dborder-bottom-2">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-2 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        2 hours ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs12 btn btn-primary badge-2 border-2 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675909,1286634,mcw12,12,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs12">
+                                        3</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675909">
+                
+ <div class="p7675909 media media-comment pull-righta " id="media-comment1286634" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7675909"> 🐼Hugs  <small> - Arina R</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+                <div class="p7675909 media media-comment pull-righta " id="media-comment1286634" style="border-bottom: solid 0px #84b7d6">
+                    <a class="pull-left" href="/Feed/?u=7675909">
+                         <img class="media-object" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;opacity:0.8">
+                    </a>
+                    <div class="media-body media-body-comment">
+                        <h5 class="media-heading media-heading-comment">
+                            <a href="/Feed/?u=7675909">Arina R</a></h5>
+                            <h6 style="margin-top:2px;">
+                                <span style="opacity:0.9;"> &nbsp; <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span>
+                            </h6>
+            
+                    </div>
+                    <div class="media-body-comment-tag ">
+                    <p>Thanks</p>
+           
+                    </div>
+                <div class="media-body-comment-date"><small class="text-muteda">  2 hours ago </small></div>
+                </div>
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286634" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7675870 media media-comment pull-righta " id="media-comment1286634" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7675870"> 🐼Hugs  <small> - Andrew M</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7675909 mcw12  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_11" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr12"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-2  border-2   btn-sm ButtonReply mcr12" type="button" id="7675909,1286634,mcw12,mcr12,12,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant12">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675909 media m13  border-wide-0 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675909">
+                    <img class="media-object border-0" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-0 pull-right">
+                            0</span> <span class="name pull-left"><a href="/Feed/?u=7675909">
+                                Arina
+                                R</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="13" class="HFSparkline" value="-5,-5,-3">
+                    
+                </div>
+                <div id="sparkline13" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-0 dborder-bottom-0">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-0 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        1 day ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs13 btn btn-primary badge-0 border-0 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675909,1286633,mcw13,13,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs13">
+                                        1</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675909">
+                
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286633" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7675909 mcw13  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_12" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr13"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-0  border-0   btn-sm ButtonReply mcr13" type="button" id="7675909,1286633,mcw13,mcr13,13,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant13">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675909 media m14  border-wide-0 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675909">
+                    <img class="media-object border-0" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-0 pull-right">
+                            0</span> <span class="name pull-left"><a href="/Feed/?u=7675909">
+                                Arina
+                                R</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="14" class="HFSparkline" value="-5,-5,-3">
+                    
+                </div>
+                <div id="sparkline14" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-0 dborder-bottom-0">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-0 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        7 days ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs14 btn btn-primary badge-0 border-0 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675909,1286632,mcw14,14,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs14">
+                                        1</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675909">
+                
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286632" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7675909 mcw14  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_13" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr14"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-0  border-0   btn-sm ButtonReply mcr14" type="button" id="7675909,1286632,mcw14,mcr14,14,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant14">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675908 media m15  border-wide-3 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675908">
+                    <img class="media-object border-3" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-3 pull-right">
+                            3</span> <span class="name pull-left"><a href="/Feed/?u=7675908">
+                                Accacia
+                                G</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="15" class="HFSparkline" value="0,-3,-2">
+                    
+                </div>
+                <div id="sparkline15" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-3 dborder-bottom-3">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-3 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        2 hours ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs15 btn btn-primary badge-3 border-3 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675908,1286630,mcw15,15,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs15">
+                                        2</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675908">
+                
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286630" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7675870 media media-comment pull-righta " id="media-comment1286630" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7675870"> 🐼Hugs  <small> - Andrew M</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7675908 mcw15  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_14" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr15"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-3  border-3   btn-sm ButtonReply mcr15" type="button" id="7675908,1286630,mcw15,mcr15,15,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant15">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675908 media m16  border-wide-2 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675908">
+                    <img class="media-object border-2" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-2 pull-right">
+                            2</span> <span class="name pull-left"><a href="/Feed/?u=7675908">
+                                Accacia
+                                G</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="16" class="HFSparkline" value="0,-3,-2">
+                    
+                </div>
+                <div id="sparkline16" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-2 dborder-bottom-2">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-2 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        1 day ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs16 btn btn-primary badge-2 border-2 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675908,1286629,mcw16,16,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs16">
+                                        1</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675908">
+                
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286629" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7675908 mcw16  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_15" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr16"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-2  border-2   btn-sm ButtonReply mcr16" type="button" id="7675908,1286629,mcw16,mcr16,16,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant16">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675908 media m17  border-wide-5 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675908">
+                    <img class="media-object border-5" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-5 pull-right">
+                            5</span> <span class="name pull-left"><a href="/Feed/?u=7675908">
+                                Accacia
+                                G</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="17" class="HFSparkline" value="0,-3,-2">
+                    
+                </div>
+                <div id="sparkline17" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-5 dborder-bottom-5">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-5 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        7 days ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs17 btn btn-primary badge-5 border-5 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675908,1286628,mcw17,17,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs17">
+                                        1</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675908">
+                
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286628" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7675908 mcw17  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_16" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr17"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-5  border-5   btn-sm ButtonReply mcr17" type="button" id="7675908,1286628,mcw17,mcr17,17,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant17">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675884 media m18  border-wide-4 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675884">
+                    <img class="media-object border-4" src="/images/avatar/1120.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-4 pull-right">
+                            4</span> <span class="name pull-left"><a href="/Feed/?u=7675884">
+                                Kay
+                                C</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span>
+                            </span><span style="opacity: 0.9; display: none;">
+                                 <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="18" class="HFSparkline" value="-3,-3,-1,-2,-1">Anxious. Annoyed. Did get some sleep though so there's that.</div>
+                <div id="sparkline18" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-4 dborder-bottom-4">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-4 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        2 hours ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs18 btn btn-primary badge-4 border-4 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675884,1286627,mcw18,18,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs18">
+                                        2</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675884">
+                
+ <div class="p7674831 media media-comment pull-righta " id="media-comment1286627" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7674831"> 🐼Hugs  <small> - Bridget A</small></a><small>  </small>
+                    </div>
+</div>
+
+                   
+                
+                <div class="p7674831 media media-comment pull-righta " id="media-comment1286627" style="border-bottom: solid 0px #84b7d6">
+                    <a class="pull-left" href="/Feed/?u=7674831">
+                         <img class="media-object" src="/images/avatar/1125.jpg?1" style="width: 64px; height: 64px;opacity:0.8">
+                    </a>
+                    <div class="media-body media-body-comment">
+                        <h5 class="media-heading media-heading-comment">
+                            <a href="/Feed/?u=7674831">Bridget A</a></h5>
+                            <h6 style="margin-top:2px;">
+                                <span style="opacity:0.9;"> &nbsp;<a href="/Account/Upgrade">
+                <span title="Done 21+ Days of updates. Next goal 30 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                3+ WEEKS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a></span>
+                            </h6>
+            
+                    </div>
+                    <div class="media-body-comment-tag ">
+                    <p>Hoping your day gets better Panda!</p>
+           
+                    </div>
+                <div class="media-body-comment-date"><small class="text-muteda">  2 hours ago </small></div>
+                </div>
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286627" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7675884 mcw18  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_17" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr18"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-4  border-4   btn-sm ButtonReply mcr18" type="button" id="7675884,1286627,mcw18,mcr18,18,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant18">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675722 media m19  border-wide-7 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675722">
+                    <img class="media-object border-7" src="/images/avatar/1124.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-7 pull-right">
+                            7</span> <span class="name pull-left"><a href="/Feed/?u=7675722">
+                                Marilyn
+                                H</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                <a href="/Account/Upgrade">
+                <span title="Done 7+ Days of updates. Next goal 14 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                1+ WEEK
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a>
+                            </span><span style="opacity: 0.9; display: none;">
+                                <a href="/Account/Upgrade">
+                <span title="Done 7+ Days of updates. Next goal 14 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                1+ WEEK
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="19" class="HFSparkline" value="4,4,3,3,4,3,5,3,3,2">
+                    
+                </div>
+                <div id="sparkline19" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-7 dborder-bottom-7">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-7 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        3 hours ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs19 btn btn-primary badge-7 border-7 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675722,1286621,mcw19,19,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs19">
+                                        4</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675722">
+                
+ <div class="p7661766 media media-comment pull-righta " id="media-comment1286621" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7661766"> 🐼Hugs  <small> - Ann L</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter">
+   </span> </a>&nbsp;
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286621" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7638522 media media-comment pull-righta " id="media-comment1286621" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7638522"> 🐼Hugs  <small> - Jen B</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7643107 media media-comment pull-righta " id="media-comment1286621" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7643107"> 🐼Hugs  <small> - Anna D</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">
+<img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_bronze.png" title="Bronze Supporter"> 
+</span>
+            </a>&nbsp;
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7675722 mcw19  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_18" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr19"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-7  border-7   btn-sm ButtonReply mcr19" type="button" id="7675722,1286621,mcw19,mcr19,19,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant19">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+            
+            
+
+            <div class="p7675714 media m20  border-wide-7 rounded-top-corner" style="margin-top: 20px;">
+                
+                <a class="pull-left" href="/Feed/?u=7675714">
+                    <img class="media-object border-7" src="/images/avatar/1112.jpg?1" style="width: 64px; height: 64px;">
+                </a>
+                <div class="media-body" style="padding-left: 10px;">
+                    
+                    <h5 class="media-heading">
+                        
+                        <span class="badge badge-7 pull-right">
+                            7</span> <span class="name pull-left"><a href="/Feed/?u=7675714">
+                                Chris
+                                S</a> </span>
+                        
+                        <br>
+                    </h5>
+                    <h6 style="padding-top: 10px;">
+                        <span class="text-muteda">
+                            
+                            
+                            <span style="opacity: 0.9;">
+                                
+                                <a href="/Account/Upgrade">
+                <span title="Done 5+ Days of updates. Next goal 7 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                5+ DAYS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a>
+                            </span><span style="opacity: 0.9; display: none;">
+                                <a href="/Account/Upgrade">
+                <span title="Done 5+ Days of updates. Next goal 7 days " class="label label-default phead">
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                5+ DAYS
+                <img src="/images/v4/starp.png" class="phead" style="height: 11px;vertical-align: inherit;top: 1px;position: relative;padding-left: 1px;padding-right: 1px;">
+                </span>
+             </a></span> </span>
+                        
+                    </h6>
+                    
+                </div>
+                <div style="clear: both;" class="MoodPostItem media-content">
+                    <input type="hidden" id="20" class="HFSparkline" value="0,-2,1,3,2">
+                    
+                </div>
+                <div id="sparkline20" style="display: none; margin-top: 15px;
+                    opacity: 0.3;">
+                </div>
+                
+                
+                <div class="media-controls-bottom  bg-7 dborder-bottom-7">
+                    <div class="row">
+                        
+                        
+                        
+                        <div class="col-xs-8 text-7 " style="line-height: 45px; font-size: 16px;
+                            text-align: left; font-weight: 400;">
+                            
+
+                            
+                        3 hours ago
+                        </div>
+                        <div class="col-xs-4">
+                            <a class=" btnhugs20 btn btn-primary badge-7 border-7 btnd-sm pull-right">
+                                <span class="ButtonHug" id="7675714,1286620,mcw20,20,Hug" style="cursor: pointer;">
+                                    
+                                    Send a 🐼 hug <span style="margin-left: 5px" class="badge mchugs20">
+                                        2</span> </span></a>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="p7675714">
+                
+ <div class="p7661766 media media-comment pull-righta " id="media-comment1286620" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7661766"> 🐼Hugs  <small> - Ann L</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter"><img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_silver.png" title="Silver Supporter">
+   </span> </a>&nbsp;
+             </small>
+                    </div>
+</div>
+
+                   
+                
+ <div class="p7664099 media media-comment pull-righta " id="media-comment1286620" style="border-bottom: solid 0px #84b7d6">
+                
+                    <div class="label label-hug" style="">
+                        <a style="color:white;" href="/Feed/?u=7664099"> 🐼Hugs  <small> - Mandy H</small></a><small> 
+             <a href="/Account/Upgrade">
+           <span class="label label-default phead">   <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"> <img border="0" height="14px" style="position:relative;top:-1px;" src="/images/v3/Medal_gold.png" title="Gold Supporter"></span> </a>
+             </small>
+                    </div>
+</div>
+
+                   
+                
+            </div>
+            
+            
+            <div class="p7675714 mcw20  ">
+                
+                <div id="ContentPlaceHolderContent_RepeaterFeed_PanelNewComment_19" class="p<%#Eval('userid') %> media media-comment pull-righta median-newcomment">
+                    
+                    <div class="media-body media-body-comment" style="border: none; padding-top: 10px;
+                        padding-bottom: 0;">
+                        <div class="input-group input-group-sm">
+                            <textarea type="text" class="form-control InputReply" style="border-width: 1px; height: 43px" maxlength="250" placeholder="Reply (250 characters max)" id="mcr20"></textarea>
+                            <span class="input-group-btn"><a style="height: 43px; top: -10px; padding-top: 10px;" class="btn btn-default badge-7  border-7   btn-sm ButtonReply mcr20" type="button" id="7675714,1286620,mcw20,mcr20,20,Reply">
+                                Reply</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mcwcant20">
+                
+            </div>
+            
+            <div style="clear: both;">
+            </div>
+        
+        
+    
+<div class="media  navbar-hidesmsall">
+    <div class="media-body media-content border-wide-10 rounded-top-corner">
+        <h4 style="margin-right: 8px; margin-left: 8px;">
+            Say hello <small class="pull-right"><a href="/Discover">More</a></small>
+        </h4>
+        
+                <div class="row" style="margin-top: 10px;">
+            
+                <div class="col-sm-4 col-xs-4   p7675896">
+                    <div class="well well-sm" style="background-color:#f3f3f3;text-align: center; margin-left: 5px; margin-right: 5px;
+                        font-size: 90%;">
+                        
+                        <a href="/Feed/?u=7675896">
+                            <img class="media-object border-7" src="/images/avatar/1116.jpg?1" style="width: 64px; height: 64px; margin: auto;border:solid 1px #eee !important">
+                            Chiming W
+                            </a>
+                        <div>
+                            <span class="label label-danger">New</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4 col-xs-4   p7643107">
+                    <div class="well well-sm" style="background-color:#f3f3f3;text-align: center; margin-left: 5px; margin-right: 5px;
+                        font-size: 90%;">
+                        
+                        <a href="/Feed/?u=7643107">
+                            <img class="media-object border-7" src="/images/avatar/1120.jpg?1" style="width: 64px; height: 64px; margin: auto;border:solid 1px #eee !important">
+                            Anna D
+                            </a>
+                        <div>
+                            <span class="label label-warning">Huggy</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4 col-xs-4   p7662423">
+                    <div class="well well-sm" style="background-color:#f3f3f3;text-align: center; margin-left: 5px; margin-right: 5px;
+                        font-size: 90%;">
+                        
+                        <a href="/Feed/?u=7662423">
+                            <img class="media-object border-7" src="/images/avatar/1121.jpg?1" style="width: 64px; height: 64px; margin: auto;border:solid 1px #eee !important">
+                            (( _ _ ))..zzzZ Z
+                            </a>
+                        <div>
+                            <span class="label label-success">Social</span>
+                        </div>
+                    </div>
+                </div>
+            
+                </div>
+            
+        
+        
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+
+
+
+    });
+</script>
+
+    <input type="submit" name="ctl00$ContentPlaceHolderContent$ButtonNext" value="Show Older" id="ContentPlaceHolderContent_ButtonNext" class="btn btn-primary" style="width: 100%; margin-top: 30px; margin-bottom: 30px;">
+
+            </small></div><small class="with-background">
+            <div class="col-xs-12 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="list-group">
+                    
+                    <span id="LinkSettings">
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </small></div><small class="with-background">
+        <footer>
+                
+    <script type="text/javascript">
+    $(window).on("load", function() {
+     //alert("3");
+     
+});
+
+    window.addEventListener('load', function () {
+ // alert("1");
+
+});
+
+        $(document).ready(function () {
+         //alert("2");
+        //   $(window).on("load", function() {
+       // alert('We are doing some quick maintenance - please be patient during this period')
+           
+
+
+            $(".InputReply").click(function(){
+            $(this).height(60);
+            });
+
+            //SEARCH ENTER
+            $(".InputReply").bind("keydown", function (event) {
+
+                var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+                if (keycode == 13) {
+                    $('.' + this.id).click();
+                    this.blur();
+                    return false;
+                } else {
+                    return true;
+                }
+            });
+
+            //SPARKLINE
+            $('.HFSparkline').each(function (i, obj) {
+                var nums = $(this).val().split(",");
+                $("#sparkline" + $(this).attr('id')).sparkline(nums, {
+                    width: '100%',
+                    height: '30px',
+                    barWidth: '100',
+                    tooltipFormat: '',
+                    type: 'bar',
+                    barColor: '#AFD246',
+                    negBarColor: '#f97a7a',
+                    zeroColor: '#F39C12'
+                });
+            });
+
+            //ADD COMMENT
+            $(".addcomment").click(function () {
+                var find = this.id;
+                //alert(find);
+                $("." + find).show();
+                $("." + find + 'cant').show();
+            });
+
+            //FOLLOW
+            $(".FeedFollow").click(function () {
+
+                var userID = this.id;
+                $("#" + userID).each(function () {
+                    $(this).addClass("text-warning");
+                });
+                //$("#" + userID).fadeOut();
+                // alert(userID);
+                $.ajax({
+                    type: "POST",
+                    url: "/WebService/WebServiceFollow.asmx/Follow",
+                    data: '{To: "' + userID + '"}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                    
+                        //  location.reload();     
+                    },
+                    error: function (response) {
+                     alert("Your MoodPanda session has expired - we need to refresh to re-establish a connection - your follow was not completed");
+                         location.reload();
+                     }
+                });
+            });
+
+            //FOLLOW TOP
+            $(".ButtonFollow").click(function () {
+
+                var userID = this.id;
+               $("#" + userID).addClass("label-warning");
+                //$("#" + userID).fadeOut();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/WebService/WebServiceFollow.asmx/Follow",
+                    data: '{To: "' + userID + '"}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                     
+                        //  location.reload();     
+                    },
+                    error: function (response) { 
+                     alert("Your MoodPanda session has expired - we need to refresh to re-establish a connection - your follow was not completed");
+                         location.reload();
+                    }
+                });
+            });
+
+           //HUG
+            $(".ButtonHug").click(function () {
+                var find = this.id;
+                var IDS = find.split(",");
+               $(this).off('click');
+              // alert("CHIEFPANDA TESTING:" + IDS[0] + '..' + '..' +  IDS[1] + '..' +  IDS[2] + '..' +  IDS[3]);
+               $("." + IDS[2]).show();
+               $("." + IDS[2]).prepend('  <div class="p7675915 media media-comment pull-righta "  id="media-comment0" style="border-bottom: solid 0px #84b7d6">                                      <div class="label label-hug" style="">                         <a style="color:white;"href="/Feed/?u=7675915"> &#128060;Hugs  <small> - You </a>  </small>                     </div> </div>                                      ');
+                $.ajax({ type: "POST",
+                    url: "/WebService/WebServiceHug.asmx/Hug",
+                    data: '{To: "'+IDS[0]+'",Rating: "'+IDS[1]+'"}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {                  
+                        // $(".bl-show-work #DueDateText").val(response.d);
+                        var Counter = $(".mchugs" + IDS[3]).html();
+                        Counter++;  
+                        $(".mchugs" + IDS[3]).html(Counter);
+                         $(".btnhugs" + IDS[3]).attr("disabled", true);
+                           // $(":submit").attr("disabled", true);
+
+                    },
+                    error: function (response) { 
+                       $("." + IDS[2]).hide();
+                     alert("Your MoodPanda session has expired - we need to refresh to re-establish a connection - your hug was not sent");
+                         location.reload();
+                     }
+                    });  
+            });
+
+            //DELETE
+            $(".ButtonDelete").click(function () {
+                var find = this.id;
+                var IDS = find.split(",");
+                // $(this).off('click');
+                $("." + IDS[1]).hide();
+                //alert(IDS[0]);
+                $.ajax({
+                    type: "POST",
+                    url: "/WebService/WebServiceDeleteRating.asmx/Delete",
+                    data: '{Rating: "' + IDS[0] + '"}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                    
+                    },
+                    error: function (response) {  alert("Your MoodPanda session has expired - we need to refresh to re-establish a connection - your delete was not completed");
+                          $("." + IDS[1]).show();
+                         location.reload(); }
+                });
+            });
+
+            //REPLY
+            $(".ButtonReply").click(function () {
+                var find = this.id;
+                var IDS = find.split(",");
+                var Comment = $('#' + IDS[3]).val();
+                Comment = Comment.replace(/(<([^>]+)>)/ig, "");
+                //Comment = Comment.replace("<","(");
+                //Comment = Comment.replace(">",")");
+                Comment = Comment.replace(/"/g, "'");
+                if (Comment !== '') {
+                    $("." + IDS[2]).show();
+                    var Placeholder = '                 <div class="p7675915 media media-comment pull-righta "  id="media-comment0" style="border-bottom: solid 0px #84b7d6">                     <a class="pull-left"  href="/Feed/?u=7675915">                          <img class="media-object" src="/images/avatar/1111.jpg?1" style="width: 64px; height: 64px;opacity:0.8"/>                     </a>                     <div class="media-body media-body-comment">                         <h5 class="media-heading media-heading-comment">                             <a href="/Feed/?u=7675915">You </a></h5>                             <h6 style="margin-top:2px;">                                 <span style="opacity:0.9;"> &nbsp; <span class="label label-danger phead" style="opacity:0.6;position:relative;top:-1px;">NEW</span></span>                             </h6>                                  </div>                     <div class="media-body-comment-tag ">                     <p>PLACEHOLDER</p>                                 </div>                 <div class="media-body-comment-date"><small class="text-muteda">  Just Now </small></div>                 </div>';
+                    $("." + IDS[2]).prepend(Placeholder.replace('PLACEHOLDER', Comment));
+                    $('#' + IDS[3]).val('')
+                    $.ajax({
+                        type: "POST",
+                        url: "/WebService/WebServiceRatingComment.asmx/Reply",
+                         data: '{Comment: "' + Comment + '",Rating: "' + IDS[1] + '"}',
+                         contentType: "application/json; charset=utf-8",
+                         dataType: "json",
+                         success: function (response) {
+                             var Counter = $(".mccomments" + IDS[4]).html();
+                             Counter++;
+                             $(".mccomments" + IDS[4]).html(Counter);
+                         },
+                         error: function (response) {  
+                           $("." + IDS[2]).hide();
+                         alert("Your MoodPanda session has expired - we need to refresh to re-establish a connection - your reply was not sent");
+                         location.reload(); }
+                     });
+                 }
+            });
+
+            //linkify
+            var url1 = /(^|&lt;|\s)(www\..+?\..+?)(\s|&gt;|$)/g,
+                url2 = /(^|&lt;|\s)(((https?|ftp):\/\/|mailto:).+?)(\s|&gt;|$)/g,
+
+                linkifyThis = function () {
+                    var childNodes = this.childNodes,
+                        i = childNodes.length;
+                    while (i--) {
+                        var n = childNodes[i];
+                        if (n.nodeType == 3) {
+                            var html = $.trim(n.nodeValue);
+                            if (html) {
+                                html = html.replace(/&/g, '&amp;')
+                                           .replace(/</g, '&lt;')
+                                           .replace(/>/g, '&gt;')
+                                           .replace(url1, '$1<a href="http://$2">$2</a>$3')
+                                           .replace(url2, '$1<a href="$2">$2</a>$5');
+                                $(n).after(html).remove();
+                            }
+                        }
+                        else if (n.nodeType == 1 && !/^(a|button|textarea)$/i.test(n.tagName)) {
+                            linkifyThis.call(n);
+                        }
+                    }
+                };
+
+            $.fn.linkify = function () {
+                return this.each(linkifyThis);
+            };
+
+            //hashtag replace
+            $('.MoodPostItem').each(function (i, obj) {
+                var test = $(this).html().replace(/ #(\S*)/g, ' <a href="/Feed/?q=$1"> #$1 </a> ');
+                $(this).html(test)
+
+                 test = $(this).html().replace(/Http/g, 'http');
+                $(this).html(test)
+                // alert(test);
+            });
+
+             $('.media-body-comment-tag').each(function (i, obj) {
+                
+
+                 test = $(this).html().replace(/Http/g, 'http');
+                $(this).html(test)
+                // alert(test);
+            });
+
+
+
+            // Usage example:
+            $('.MoodPostItem').linkify();
+            $('.media-body-comment-tag').linkify();
+
+
+            $('.media-body-comment-tag').find("a").each(function (i, obj) {
+
+                if (encodeURIComponent(obj).search(/moodpanda.com/gi) < 0)//dont preview moodpanda site
+                {
+                    var loaderdata = "<div class='loaderdata PW' style='line-height:170px;color:#888; border: solid 1px #cecece; background-color: #eee;margin-top:5px;margin-bottom:3px;font-size:13px;width:100%;height:170px;text-align:center;'>Loading Preview...</div>";
+
+                    var x = $(this);
+
+                    x.append(loaderdata);
+                    $.get("/urlpreview.aspx?url=" + encodeURIComponent(obj), function (data) {
+
+                        x.parent().append(data);
+                        x.parent().find(".loaderdata").hide();
+                        //alert(  encodeURIComponent(obj) );
+                    });
+                }
+            });
+            $('.MoodPostItem').find("a").each(function (i, obj) {
+
+                if (encodeURIComponent(obj).search(/moodpanda.com/gi) < 0)//dont preview moodpanda site
+                {
+                    var loaderdata = "<div class='loaderdata PW' style='line-height:170px;color:#888; border: solid 1px #cecece; background-color: #eee;margin-top:5px;margin-bottom:3px;font-size:13px;width:100%;height:170px;text-align:center;'>Loading Preview...</div>";
+
+                    var x = $(this);
+
+                    x.append(loaderdata);
+                    $.get("/urlpreview.aspx?url=" + encodeURIComponent(obj), function (data) {
+
+                        x.parent().append(data);
+                        x.parent().find(".loaderdata").hide();
+                        //alert(  encodeURIComponent(obj) );
+                    });
+                }
+            });
+
+
+        });
+    </script>
+
+            </footer>
+    </small></div><small class="with-background">
+    <div style="height: 200px">
+    </div>
+    <script type="text/javascript">
+            $(document).ready(function () {
+
+                //LOADNG DIV
+                $("#LoadDiv").removeClass('loading');
+                $(".ShowLoader").click(function (event) {
+                    event.preventDefault();
+                    $("#LoadDiv").addClass('loading');
+                    window.location.href = this.href;
+                });
+
+
+
+                //datepicker stuff
+                $(".DateHour").hide();
+                $(".DateMinute").hide();
+
+                
+                $(".ResetOlder").click(function () {
+                       $("#DatePicker").datepicker("show");
+                }); 
+
+                 // date
+                $(".ResetYesterday").click(function () {
+                    var d = new Date();
+                    d.setDate(d.getDate()-1);
+                     var year = d.getFullYear();
+                    var month = d.getMonth()+1;
+                    var day = d.getDate();
+                    if (day < 10) {
+                          day = '0' + day;
+                        }
+                        if (month < 10) {
+                          month = '0' + month;
+}
+                    $("#DatePicker").val(year +"-" + month + "-" + day);
+                    $(".DateHour").show();
+                $(".DateMinute").show();
+                   
+                }); 
+                 $(".Reset2day").click(function () {
+                    var d = new Date();
+                    d.setDate(d.getDate()-2);
+                    var year = d.getFullYear();
+                    var month = d.getMonth()+1;
+                    var day = d.getDate();
+                    if (day < 10) {
+                      day = '0' + day;
+                    }
+                    if (month < 10) {
+                      month = '0' + month;
+                    }
+                      $("#DatePicker").val(year +"-" + month + "-" + day);
+                    $(".DateHour").show();
+                $(".DateMinute").show();
+                });
+                  $(".Reset3day").click(function () {
+                    var d = new Date();
+                    d.setDate(d.getDate()-3);
+                    var year = d.getFullYear();
+                    var month = d.getMonth()+1;
+                    var day = d.getDate();
+                    if (day < 10) {
+                      day = '0' + day;
+                    }
+                    if (month < 10) {
+                      month = '0' + month;
+                    }
+                      $("#DatePicker").val(year +"-" + month + "-" + day);
+                    $(".DateHour").show();
+                $(".DateMinute").show();
+                });
+                //reset date
+                $(".ResetNow").click(function () {
+                    $("#DatePicker").val('NOW');
+                    $(".DateHour").hide();
+                    $(".DateMinute").hide();
+                });
+
+                $("#ShowAdvanced").click(function () {
+                    $("#Advanced").show();
+                });
+
+                //show/hide time fields
+                $("#DatePicker").change(function () {
+                    if ($("#DatePicker").val() != 'NOW') {
+                        $(".DateHour").show();
+                        $(".DateMinute").show();
+                        $(".DateHour").css("display", "inline");
+                        $(".DateMinute").css("display", "inline");
+                    }
+                    else {
+                        $(".DateHour").hide();
+                        $(".DateMinute").hide();
+                    }
+                });
+                $("#DatePicker").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    showOn: "button",
+                    buttonImage: "/images/v4/calendar.png",
+                    buttonImageOnly: true,
+                    maxDate: "+0M +0D",
+                    dateFormat: "yy-mm-dd"
+                });
+                $(".ui-datepicker-trigger").css("left", "-122px");
+                $(".ui-datepicker-trigger").css("top", "-3px");
+                $(".ui-datepicker-trigger").css("position", "relative");
+
+
+
+                //SEARCH ENTER
+                $(".SearchInput").bind("keydown", function (event) {
+                    var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+                    if (keycode == 13) {
+                        $('.ButtonSearch').click();
+                        return false;
+                    } else {
+                        return true;
+                    }
+                });
+
+                //SIDE NAV
+                $('[data-toggle=offcanvas]').click(function () {
+                    $('.row-offcanvas').toggleClass('active')
+                });
+
+                //static side nav 
+                //            $("#fixednav").affix({
+                //                offset: { 
+                //                    top: 30 
+                //                }
+                //            });
+
+                //SEARCH
+                $('.ButtonSearch').click(function () {
+                    var Search = $('#TextSearch').val();
+                    $('#TextSearch').val('Loading...');
+                    window.location.href = "/Feed/?q=" + Search;
+                });
+
+                //CHAR COUNT
+                $(".UpdateMoodText").charCounter(400, {
+                    container: "#CharacterCounter"
+                });
+
+                //tooltips
+                $("[rel='tooltip']").tooltip();
+
+                //MOOD SLIDER
+                $("#slider-range-min").slider({
+                    range: "min",
+                    value: 5,
+                    min: 0,
+                    max: 10,
+                    step: 1,
+                    slide: function (event, ui) {
+                        $("#amount").val(ui.value);
+                        $(".ButtonUpdate").text("Update Mood to " + ui.value);
+                        $(".ui-slider-range").removeClass('badge-0');
+                        $(".ui-slider-range").removeClass('badge-1');
+                        $(".ui-slider-range").removeClass('badge-2');
+                        $(".ui-slider-range").removeClass('badge-3');
+                        $(".ui-slider-range").removeClass('badge-4');
+                        $(".ui-slider-range").removeClass('badge-5');
+                        $(".ui-slider-range").removeClass('badge-6');
+                        $(".ui-slider-range").removeClass('badge-7');
+                        $(".ui-slider-range").removeClass('badge-8');
+                        $(".ui-slider-range").removeClass('badge-9');
+                        $(".ui-slider-range").removeClass('badge-10');
+                        $(".ui-slider-range").addClass('badge-' + ui.value);
+
+                        
+                        
+                        $(".modal-content").removeClass('border-wide-0');
+                        $(".modal-content").removeClass('border-wide-1');
+                        $(".modal-content").removeClass('border-wide-2');
+                        $(".modal-content").removeClass('border-wide-3');
+                        $(".modal-content").removeClass('border-wide-4');
+                        $(".modal-content").removeClass('border-wide-5');
+                        $(".modal-content").removeClass('border-wide-6');
+                        $(".modal-content").removeClass('border-wide-7');
+                        $(".modal-content").removeClass('border-wide-8');
+                        $(".modal-content").removeClass('border-wide-9');
+                        $(".modal-content").removeClass('border-wide-10');
+                        $(".modal-content").addClass('border-wide-' + ui.value);
+                        
+                        $(".ButtonOk").removeClass('border-0');
+                        $(".ButtonOk").removeClass('border-1');
+                        $(".ButtonOk").removeClass('border-2');
+                        $(".ButtonOk").removeClass('border-3');
+                        $(".ButtonOk").removeClass('border-4');
+                        $(".ButtonOk").removeClass('border-5');
+                        $(".ButtonOk").removeClass('border-6');
+                        $(".ButtonOk").removeClass('border-7');
+                        $(".ButtonOk").removeClass('border-8');
+                        $(".ButtonOk").removeClass('border-9');
+                        $(".ButtonOk").removeClass('border-10');
+                        $(".ButtonOk").addClass('border-' + ui.value);
+                        
+                        $(".ButtonOk").removeClass('badge-0');
+                        $(".ButtonOk").removeClass('badge-1');
+                        $(".ButtonOk").removeClass('badge-2');
+                        $(".ButtonOk").removeClass('badge-3');
+                        $(".ButtonOk").removeClass('badge-4');
+                        $(".ButtonOk").removeClass('badge-5');
+                        $(".ButtonOk").removeClass('badge-6');
+                        $(".ButtonOk").removeClass('badge-7');
+                        $(".ButtonOk").removeClass('badge-8');
+                        $(".ButtonOk").removeClass('badge-9');
+                        $(".ButtonOk").removeClass('badge-10');
+                        $(".ButtonOk").addClass('badge-' + ui.value);
+
+                        
+                        $(".modal-footer").removeClass('bg-0');
+                        $(".modal-footer").removeClass('bg-1');
+                        $(".modal-footer").removeClass('bg-2');
+                        $(".modal-footer").removeClass('bg-3');
+                        $(".modal-footer").removeClass('bg-4');
+                        $(".modal-footer").removeClass('bg-5');
+                        $(".modal-footer").removeClass('bg-6');
+                        $(".modal-footer").removeClass('bg-7');
+                        $(".modal-footer").removeClass('bg-8');
+                        $(".modal-footer").removeClass('bg-9');
+                        $(".modal-footer").removeClass('bg-10');
+                        $(".modal-footer").addClass('bg-' + ui.value);
+
+                        
+                        
+                        if (ui.value < 1) {
+                            $("#Crisis").show()
+                        }
+                        else {
+                            $("#Crisis").hide()
+                        }
+                    }
+                }).draggable();
+                $(".ButtonUpdate").text("Update Mood to " + $("#slider-range-min").slider("value"));
+                $(".ui-slider-range").addClass('badge-5');
+                $("#Crisis").hide()
+
+                //UPDATE
+                $(".ButtonUpdate").click(function () {
+                    var find = this.id;
+                    var IDS = find.split(",");
+                    var Comment = $('.UpdateMoodText').val();
+                    Comment = Comment.replace(/(<([^>]+)>)/ig, "");
+                    //Comment = Comment.replace("<","(");
+                    Comment = Comment.replace(">", ")");
+                    Comment = Comment.replace(/"/g, "'");
+                    var Rating = $("#slider-range-min").slider("value")
+                    var Facebook = $("input.CBFacebook, span.CBFacebook input").is(':checked');
+                    var Twitter = $("input.CBTwitter, span.CBTwitter input").is(':checked');
+                    var Date = $("#DatePicker").val();
+                    var DateHour = $(".DateHour").val();
+                    var DateMinute = $(".DateMinute").val();
+                    if (Date != "NOW") {
+                        Date = Date + " " + DateHour + DateMinute;
+                    }
+                    $("#DatePicker").val('NOW');
+                    $(".DateHour").hide();
+                    $(".DateMinute").hide();
+                    //alert(Date);
+                    $.ajax({
+                        type: "POST",
+                        url: "/WebService/WebServiceUpdate.asmx/Update",
+                        //string Comment, string Value, string DateTime, string Facebook, string Twitter
+                        data: '{Comment: "' + Comment + '",Value: "' + Rating + '",DT: "' + Date + '",Facebook: "' + Facebook + '",Twitter: "' + Twitter + '"}',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                        
+                            //alert(response);
+                            $('#UpdateMood').modal('hide');
+                            $('#SuccessUpdate').modal('show');
+                            
+                        },
+                         error: function (xhr, ajaxOptions, thrownError) {
+                         alert("Your MoodPanda session has expired - we need to refresh to re-establish a connection - your update was not completed");
+                         location.reload();
+      
+      }
+                      
+                    });
+                });
+            });
+    </script>
+    <!--script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-350184-11', 'moodpanda.com');
+        ga('send', 'pageview');
+
+    </script-->
+    
+
+
+</small></form><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>
